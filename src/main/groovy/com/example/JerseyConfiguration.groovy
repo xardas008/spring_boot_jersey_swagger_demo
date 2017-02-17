@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration
 class JerseyConfiguration extends ResourceConfig {
 
     public JerseyConfiguration() {
-
+        register(GreetingsController)
     }
 }
