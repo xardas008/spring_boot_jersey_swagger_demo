@@ -6,7 +6,7 @@ import org.glassfish.jersey.server.ResourceConfig
 import org.springframework.context.annotation.Configuration
 
 /**
- * Created by dkreuter on 17.02.17.
+ * Jersey configuration class.
  */
 @Configuration
 class JerseyConfiguration extends ResourceConfig {

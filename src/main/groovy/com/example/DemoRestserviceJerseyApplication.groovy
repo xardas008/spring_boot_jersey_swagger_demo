@@ -7,18 +7,12 @@ import org.springframework.context.annotation.Bean
 import springfox.documentation.swagger.web.UiConfiguration
 import springfox.documentation.swagger2.annotations.EnableSwagger2
 
-import javax.ws.rs.core.Application
-
 @SpringBootApplication
 @EnableSwagger2 // needs to be present so that swagger ui will show up the API's
-class DemoRestserviceJerseyApplication extends Application {
+class DemoRestserviceJerseyApplication {
 
 	static void main(String[] args) {
 		SpringApplication.run DemoRestserviceJerseyApplication, args
-	}
-
-	public DemoRestserviceJerseyApplication() {
-
 	}
 
     @Bean
@@ -34,20 +28,6 @@ class DemoRestserviceJerseyApplication extends Application {
         return beanConfig;
     }
 
-    @Override
-    public Set<Class<?>> getClasses() {
-        Set<Class<?>> resources = new HashSet();
-
-        //resources.add(FirstResource.class);
-        //resources.add(SecondResource.class);
-        //...
-
-        resources.add(io.swagger.jaxrs.listing.ApiListingResource.class);
-        resources.add(io.swagger.jaxrs.listing.SwaggerSerializers.class);
-
-        return resources;
-    }
-
     @Bean
     UiConfiguration uiConfig() {
         return new UiConfiguration(
@@ -58,7 +38,7 @@ class DemoRestserviceJerseyApplication extends Application {
                 UiConfiguration.Constants.DEFAULT_SUBMIT_METHODS,
                 false,        // enableJsonEditor      => true | false
                 true,         // showRequestHeaders    => true | false
-                60000L);      // requestTimeout => in milliseconds, defaults to null (uses jquery xh timeout)
+                60000L)      // requestTimeout => in milliseconds, defaults to null (uses jquery xh timeout)
     }
 
 }
