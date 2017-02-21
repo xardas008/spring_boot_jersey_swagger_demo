@@ -21,7 +21,7 @@ class DemoRestserviceJerseyApplication {
         beanConfig.setVersion("1.0.2");
         beanConfig.setSchemes("http");
         beanConfig.setHost("localhost:8080");
-        beanConfig.setBasePath("/api");
+        beanConfig.setBasePath("/example");
         beanConfig.setResourcePackage("com.example")    // needs to be the base package of the API documentation.
         beanConfig.setScan(true);
         beanConfig.setPrettyPrint(true)
