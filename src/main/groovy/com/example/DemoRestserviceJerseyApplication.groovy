@@ -32,9 +32,9 @@ class DemoRestserviceJerseyApplication {
     UiConfiguration uiConfig() {
         return new UiConfiguration(
                 "validatorUrl",// url
-                "none",       // docExpansion          => none | list
+                "none",       // docExpansion          => none | list, full
                 "alpha",      // apiSorter             => alpha
-                "schema",     // defaultModelRendering => schema
+                "schema",     // defaultModelRendering => schema, model
                 UiConfiguration.Constants.DEFAULT_SUBMIT_METHODS,
                 false,        // enableJsonEditor      => true | false
                 true,         // showRequestHeaders    => true | false
